@@ -1,0 +1,49 @@
+{
+  "name": "goit-js-hw-11-timer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html",
+    "predeploy": "npm run build -- --public-url /goit-js-hw-11-timer/",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Davidass/goit-js-hw-11-timer"
+  },
+  "keywords": [],
+  "author": "David Volosyan <david_volosyan@mail.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Davidass/goit-js-hw-11-timer/issues"
+  },
+  "homepage": "https://davidass.github.io/goit-js-hw-11-timer/",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-custom-dist-structure": "^1.1.16"
+  },
+  "dependencies": {
+    "gh-pages": "^3.1.0",
+    "parcel-plugin-nuke-dist": "^1.0.1"
+  },
+  "customDistStructure": {
+    "config": {
+      ".css": "css",
+      ".js": "js",
+      "images": [
+        ".jpg",
+        ".png"
+      ],
+      ".fileExtension": "folder / in / dist",
+      "folder / in / dist": [
+        ".file",
+        ".extensions"
+      ]
+    },
+    "options": {
+      "development": true
+    }
+  }
+}
