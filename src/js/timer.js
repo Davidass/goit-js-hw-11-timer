@@ -8,7 +8,6 @@ const refs = {
 
   btnStart: document.querySelector('.btn[data-active="start"]'),
   btnStop: document.querySelector('.btn[data-active="stop"]'),
-  btnClear: document.querySelector('.btn[data-active="clear"]'),
 };
 
 class CountdownTimer {
@@ -88,12 +87,15 @@ class CountdownTimer {
 }
 
 function showClockFace({ days, hours, mins, secs }) {
-  refs.clockface.textContent = `${days}:${hours}:${mins}:${secs}`;
+  refs.days.textContent = `${days}`;
+  refs.hours.textContent = `${hours}`;
+  refs.mins.textContent = `${mins}`;
+  refs.secs.textContent = `${secs}`;
 }
 
 const timer = new CountdownTimer({
   selector: '#timer-1',
-  targetDate: new Date('Jan 01, 2021, 14'),
+  targetDate: new Date(2021, 0, 1, 0, 0),
   onTimer: showClockFace,
 });
 
